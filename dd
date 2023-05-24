@@ -1,0 +1,25 @@
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+
+# Generate some data
+data = np.random.normal(loc=0, scale=1, size=1000)
+x = np.linspace(-4, 4, 100)
+y = 1 / np.sqrt(2 * np.pi) * np.exp(-x**2 / 2)
+
+# Create a figure with one subplot
+fig, ax = plt.subplots(figsize=(8, 6))
+
+# Plot the histogram
+sns.histplot(data, ax=ax, kde=False)
+
+# Plot the function
+ax.plot(x, y, 'r--')
+
+# Set the axis labels and title
+ax.set_xlabel('Data')
+ax.set_ylabel('Frequency')
+ax.set_title('Histogram and Function')
+
+# Display the plot
+plt.show()
