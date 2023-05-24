@@ -23,3 +23,27 @@ ax.set_title('Histogram and Function')
 
 # Display the plot
 plt.show()
+
+
+
+
+plt.figure(figsize=(10, 5))
+x = np.array([0, 1, 2]) # de möjliga utfallen för X
+y = np.array([0.05, 0.45, 0.5]) # motsvarande sannolikheter
+
+# En plot av fördelningsfunktionen H_X(x), gives probability
+#plt.subplot(131)
+#sns.barplot(x = x, y = np.cumsum(y), color = 'red') # cumsum är kumulativ summa av en vektor
+#plt.title('Fördelningsfunktionen $H_X(x)$')
+#plt.show()
+print(np.cumsum(y))
+print(y)
+# En plot av inversens fördelningsfunktionen H_X(x), gives random variable
+#plt.subplot(132)
+#x = np.array([0.05, 0.5, 1])
+#y = np.array([0, 1, 2])
+#sns.barplot(x = x, y = y, color = 'green') # cumsum är kumulativ summa av en vektor
+#plt.title('Invers av fördelningsfunktionen $H_X(x)$')
+#plt.show()
+print(np.cumsum(y))
+print(y)
