@@ -17,3 +17,19 @@ sns.histplot(invF(y), stat='density')
 #plt.plot(s,f(s), 'r', linestyle='--', label = 'exp')
 ax1 = plt.subplot(4, 3, 2)
 sns.histplot(invF(y), stat='density')
+
+
+
+
+def g(x):
+    for i in y1:
+        counter = 1
+        taljare1 = x**(i-1)
+        taljare2 = np.exp((-2*x))
+        taljare3 = 2**i
+        #fac = math.factorial(i-1)
+        #z = (taljare1*taljare2*taljare3)/fac
+        #return z
+    #namnare = math.factorial(fac)
+    #z = (x**(y1-1) * np.exp(-2*x) * 2**x)/(math.factorial(y1-1))
+    #y = np.exp(-0.5*x)
