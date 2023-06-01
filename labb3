@@ -1,3 +1,19 @@
 ax1 = plt.subplot(4, 3, 1)
 sns.histplot(invF(x1), stat='density')
 plt.plot(x1,f(s), 'r', linestyle='--', label = 'exp')
+
+
+
+
+
+
+y = ss.gamma.pdf(x1, 1, 0, 2)
+y1 = ss.gamma.pdf(x1, 1, 0, 2)
+y2 = ss.gamma.pdf(x2, 1, 0, 2)
+y3 = ss.gamma.pdf(x3, 1, 0, 2)
+y4 = ss.gamma.pdf(x4, 1, 0, 2)
+ax1 = plt.subplot(4, 3, 1)
+sns.histplot(invF(y), stat='density')
+#plt.plot(s,f(s), 'r', linestyle='--', label = 'exp')
+ax1 = plt.subplot(4, 3, 2)
+sns.histplot(invF(y), stat='density')
