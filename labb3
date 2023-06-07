@@ -33,3 +33,37 @@ def g(x):
     #namnare = math.factorial(fac)
     #z = (x**(y1-1) * np.exp(-2*x) * 2**x)/(math.factorial(y1-1))
     #y = np.exp(-0.5*x)
+
+
+
+
+from scipy.special import gamma, factorial
+def g(x):
+    gammas = ss.gamma.pdf(x, 1, 0, 2)
+    return gammas
+y1 = x1
+y2 = x1 + x2
+y3 = x2 + x3
+y4 = x3 + x4
+
+ax1 = plt.subplot(2, 2, 1)
+sns.histplot(invF(y1), stat='density')
+plt.plot(s,g(s), 'r', color = 'red', linestyle='--', label = 'exp')
+ax2 = plt.subplot(2, 2, 2)
+sns.histplot(invF(y2), stat='density')
+plt.plot(s,f(s), 'r', color = 'red', linestyle='--', label = 'exp')
+ax3 = plt.subplot(2, 2, 3)
+sns.histplot(invF(y3), stat='density')
+plt.plot(s,f(s), 'r', color = 'red', linestyle='--', label = 'exp')
+ax4 = plt.subplot(2, 2, 4)
+sns.histplot(invF(y4), stat='density')
+plt.plot(s,f(s), 'r', color = 'red', linestyle='--', label = 'exp')
+#plt.plot(x,y, 'r', linestyle='--', label = 'exp')
+#ax2 = plt.subplot(2, 3, 1)
+#plt.plot(x,y1, 'r', linestyle='--', label = 'exp')
+ax1.title.set_text('y1')
+ax2.title.set_text('y2')
+ax3.title.set_text('y3')
+ax4.title.set_text('y4')
+#print(g(1))
+print(y1)
