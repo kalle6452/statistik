@@ -84,3 +84,26 @@ print([fit_shape, fit_loc, fit_scale])
 
 plt.hist(d1,bins=50,label='loc=0,shape=10,scale=5',density=True)
 plt.plot(xlin,gamma.pdf(xlin,a=fit_shape,loc = fit_loc, scale = fit_scale))
+
+
+
+
+
+
+
+
+ax2 = plt.subplot(2, 2, 2)
+sns.histplot(invF(y2), stat='density')
+plt.plot(s,y, 'r', color = 'red', linestyle='--', label = 'exp')
+ax3 = plt.subplot(2, 2, 3)
+sns.histplot(invF(y3), stat='density')
+plt.plot(s,f(s), 'r', color = 'red', linestyle='--', label = 'exp')
+ax4 = plt.subplot(2, 2, 4)
+sns.histplot(invF(y4), stat='density')
+plt.plot(s,f(s), 'r', color = 'red', linestyle='--', label = 'exp')
+#plt.plot(x,y, 'r', linestyle='--', label = 'exp')
+#ax2 = plt.subplot(2, 3, 1)
+#plt.plot(x,y1, 'r', linestyle='--', label = 'exp')
+ax2.title.set_text('y2')
+ax3.title.set_text('y3')
+ax4.title.set_text('y4')
