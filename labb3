@@ -67,3 +67,20 @@ ax3.title.set_text('y3')
 ax4.title.set_text('y4')
 #print(g(1))
 print(y1)
+
+
+
+
+
+# Omvandla detta till din kod https://stackoverflow.com/questions/67874062/generating-independent-random-variables
+d1 = gamma.rvs(a = 10, scale=5,size=1000,random_state=99)
+vidar = np.random.gamma(shape, scale, size)
+xlin = np.linspace(0,160,50)
+
+fit_shape, fit_loc, fit_scale=gamma.fit(d1)
+print([fit_shape, fit_loc, fit_scale])
+
+[11.135335235456457, -1.9431969603988053, 4.693776771991816]
+
+plt.hist(d1,bins=50,label='loc=0,shape=10,scale=5',density=True)
+plt.plot(xlin,gamma.pdf(xlin,a=fit_shape,loc = fit_loc, scale = fit_scale))
